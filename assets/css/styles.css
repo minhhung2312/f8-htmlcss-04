@@ -483,7 +483,7 @@ button {
 
 .tab__list {
     position: relative;
-    display: flex;
+    display: inline-flex;
     column-gap: 56px;
 }
 
@@ -572,4 +572,129 @@ button {
     height: 2px;
     background: #ff5d31;
     border-radius: 1px;
+}
+
+/* Service */
+.service {
+    margin-top: 190px;
+    padding: 68px 0 100px;
+    background: #fff6ed;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__desc {
+    color: #5e6085;
+    font-family: Sora, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.service__body {
+    margin-top: 70px;
+    display: grid;
+    column-gap: 65px;
+    grid-template-columns: auto 1fr auto;
+}
+
+.service-item {
+    width: 294px;
+    padding: 30px 22px 30px 28px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #fff;
+}
+
+.service-item + .service-item {
+    margin-top: 24px;
+}
+
+.service-item__heading {
+    position: relative;
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-left: 12px;
+}
+
+.service-item__heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    border-radius: 1px;
+    background: linear-gradient(90deg, #ff5b2e 0.39%, #ffa187 100.29%);
+}
+
+.service-item__desc {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.72;
+}
+
+.service-item__more {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 6px;
+    margin-top: 24px;
+    color: #34396a;
+    font-family: Sora, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    transition: opacity 0.3s;
+}
+
+.service-item__more::after {
+    content: url(../icons/arrow-up-right.svg);
+    margin-top: 2px;
+}
+
+.service-item__more:hover {
+    opacity: 0.9;
+}
+
+.service__media {
+    position: relative;
+    margin-top: 18px;
+}
+
+.service__media::after {
+    content: "";
+    position: absolute;
+    height: 350px;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.service__cta-wrap {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.service__cta {
+    min-width: 214px;
+    color: var(--second-color);
+    border-color: currentColor;
 }
